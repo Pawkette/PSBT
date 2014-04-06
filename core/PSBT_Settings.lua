@@ -36,6 +36,11 @@ local defaults =
     { 
         255, 255, 255, 1 
     },
+	
+    taken_color = 
+    { 
+        255, 255, 255, 1 
+    },
     
     healing_color = 
     { 

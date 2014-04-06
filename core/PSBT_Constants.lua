@@ -24,6 +24,7 @@ PSBT_SETTINGS =
     normal_font         = 'normal_font',
     sticky_font         = 'sticky_font',
     damage_color        = 'damage_color',
+	taken_color			= 'taken_color',
     healing_color       = 'healing_color',
     normal_color        = 'normal_color'
 }
