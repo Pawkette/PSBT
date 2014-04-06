@@ -42,10 +42,16 @@ function PSBT_Options:InitializeControlPanel()
             self._root:SetSetting( PSBT_SETTINGS.healing_color, { r,g,b,a } )
         end )
 
-    LAM:AddColorPicker( self.config_panel, '_psbt_font_colors_damage', 'Damage:', '', 
+    LAM:AddColorPicker( self.config_panel, '_psbt_font_colors_damage', 'Damage done:', '', 
         function() return unpack( self._root:GetSetting( PSBT_SETTINGS.damage_color ) ) end,
         function( r, g, b, a )
             self._root:SetSetting( PSBT_SETTINGS.damage_color, { r,g,b,a } )
+        end )
+		
+	LAM:AddColorPicker( self.config_panel, '_psbt_font_colors_taken', 'Damage taken:', '', 
+        function() return unpack( self._root:GetSetting( PSBT_SETTINGS.taken_color ) ) end,
+        function( r, g, b, a )
+            self._root:SetSetting( PSBT_SETTINGS.taken_color, { r,g,b,a } )
         end )
 
     LAM:AddColorPicker( self.config_panel, '_psbt_font_colors_normal', 'Normal:', '', 

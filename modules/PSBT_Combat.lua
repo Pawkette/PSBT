@@ -270,7 +270,11 @@ function PSBT_Combat:DispatchEvent( result, combatEvent )
     if ( healing_events[ result ] ) then
         color = PSBT_SETTINGS.healing_color
     elseif( damage_events[ result ] ) then
-        color = PSBT_SETTINGS.damage_color
+        if ( area == PSBT_AREAS.INCOMING ) then
+			color = PSBT_SETTINGS.taken_color
+        elseif ( area ==  PSBT_AREAS.OUTGOING ) then
+            color = PSBT_SETTINGS.damage_color
+        end
     end
 
     if ( result == ACTION_RESULT_POWER_ENERGIZE or result == ACTION_RESULT_POWER_DRAIN ) then
